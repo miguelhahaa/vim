@@ -1,4 +1,3 @@
-"Status Bar"
 set laststatus=2
 
 "Editor"
@@ -9,20 +8,17 @@ set noshowmode
 call plug#begin()
 
 "Lista de Plugins"
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'itchyny/lightline.vim'
 Plug 'lervag/vimtex'
 Plug 'sheerun/vim-polyglot'
-Plug 'sainnhe/everforest'
 Plug 'sirver/ultisnips'
 
 call plug#end()
 
 "Color Scheme"
-set background=dark
-let g:everforest_background = 'hard'
-colorscheme everforest
-let g:lightline = {'colorscheme': 'everforest'}
+colorscheme material
+let g:lightline = {'colorscheme': 'material_vim'}
 
 "VimTex"
 let g:vimtex_view_forward_search_on_start = 0
@@ -34,10 +30,12 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories=["math"]
 
-"Correção"
-"setlocal spell"
-"set spelllang=pt_br"
-
 "Misc"
 set nocompatible
 set noshowmode
+
+highlight Normal guibg=NONE ctermbg=NONE
+highlight NonText guibg=NONE ctermbg=NONE
+highlight LineNr guibg=NONE ctermbg=NONE
+highlight SignColumn guibg=NONE ctermbg=NONE
+highlight EndOfBuffer guibg=NONE ctermbg=NONE
